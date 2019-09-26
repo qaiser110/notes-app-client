@@ -15,10 +15,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "aws s3 sync build/ s3://notes-app-55 --delete",
-    "postdeploy": "aws cloudfront create-invalidation --distribution-id E30ER9S64RGTD4 --paths '/*'",
-    "test": "react-scripts test",
+    "predeployX": "npm run build",
+    "deployX": "aws s3 sync build/ s3://notes-app-55 --delete",
+    "postdeployX": "aws cloudfront create-invalidation --distribution-id E30ER9S64RGTD4 --paths '/*'",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
